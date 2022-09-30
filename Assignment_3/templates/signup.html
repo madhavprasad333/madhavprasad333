@@ -8,7 +8,7 @@
 
 <body>
     <div class="signup-form">
-        <form action="/adduser" method="post">
+        <form action="/adduser" method="post" onsubmit="return vaild()">
             <h2>Register</h2>
             <p class="hint-text">Create your account. It's free and only takes a minute.</p>
             <div class="form-group">
@@ -39,4 +39,21 @@
         </form>
         <div class="text-center">Already have an account? <a href="signin">Sign In</a></div>
     </div>
+    <script>
+        function valid(){
+            var pwd = document.getElementById("password");
+            var cpwd = document.getElementById("confirm_password"); 
+    
+            if(pwd.value >= 6 || cpwd.value >=6){
+                 alert("password Must be minimum of 6 character");
+                return false;
+            }
+
+           else if(pwd.value != cpwd.value){
+                alert("Password does't Match");
+                return false;
+           }
+           return true;    
+        }
+    </script>
 </body>
