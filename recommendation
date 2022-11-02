@@ -1,0 +1,8 @@
+import csv
+
+role='Web Developer'
+with open("Company_Database.csv", 'r') as file:
+    csvreader = csv.reader(file)
+    for i in csvreader:
+        if i[2] == role:
+            print(i)
