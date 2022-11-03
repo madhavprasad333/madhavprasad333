@@ -10,16 +10,17 @@ with open("Company_Database.csv", 'r') as file:
             arr.append(dict)
             
 <ol>
-    {% for i in arr %}
-    <li>Company Name : {{i.cname}}</li>
-	<ul style="list-style: none;">
-		<li>Role : {{i.role}}</li>
-		<li>Experience: {{i.ex}}</li>	  
-		<li>Skill : {{i.skill}}</li>	 
-		<li>Vacancy : {{i.vacancy}}</li>
-		<li>Stream : {{i.stream}}</li>	  
-		<li>Job Location : {{i.job_location}}</li>	  
-		<li>Salary : {{i.salary}}</li>
-	</ul>
-    {% endfor %}
-</ol>
+		    {% for i in arr %}
+		    <li>Company Name : {{i.cname}}</li>
+			<ul style="list-style: none;">
+				<li>Role : {{i.role}}</li>
+				<li>Experience: {{i.ex}}</li>	  
+				<li>Skill : {{i.skill}}</li>	 
+				<li>Vacancy : {{i.vacancy}}</li>
+				<li>Stream : {{i.stream}}</li>	  
+				<li>Job Location : {{i.job_location}}</li>	  
+				<li>Salary : {{i.salary}}</li>
+			</ul>
+			<hr width="100%" color="black">
+			{% endfor %}
+		</ol>
