@@ -1,8 +1,16 @@
-import csv
-
-role='Web Developer'
+arr = []
+role='Senior Software Developer'
 with open("Company_Database.csv", 'r') as file:
     csvreader = csv.reader(file)
     for i in csvreader:
         if i[2] == role:
-            print(i)
+            dict={
+                'cname':i[1],'role':i[2],'ex':i[3],'skill':i[4],'vacancy':i[5],'stream':i[6],'job_location':i[7],'salary':i[8]
+            }
+            arr.append(dict)
+            
+  <ul>
+		    {% for i in arr %}
+		         <li>{{i.cname}} {{i.role}} {{i.ex}} {{i.skill}} {{i.vacancy}}} {{i.stream}} {{i.job_location}} {{i.salary}}</li>
+		    {% endfor %}
+	    </ul>
